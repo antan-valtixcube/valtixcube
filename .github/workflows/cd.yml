@@ -5,9 +5,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy-dev:
+    name: Dev Server
     runs-on: ubuntu-latest
-
+    environment: dev
     steps:
       - name: Deploy via ssh
         uses: appleboy/ssh-action@v0.1.6
@@ -16,8 +17,26 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /app/valtixcube
+            cd /app/valtixcube-dev
             git pull origin main
             docker compose down
-            docker build -t valtixcube-valtixcube .
+            docker build -t valtixcube_dev .
+            docker compose up -d
+  
+  deploy-qa:
+    name: QA Server
+    runs-on: ubuntu-latest
+    environment: qa
+    steps:
+      - name: Deploy via ssh
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /app/valtixcube-qa
+            git pull origin main
+            docker compose down
+            docker build -t valtixcube_qa .
             docker compose up -d
