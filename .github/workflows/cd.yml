@@ -25,6 +25,7 @@ jobs:
   
   deploy-qa:
     name: QA Server
+    needs: deploy-dev
     runs-on: ubuntu-latest
     environment: qa
     steps:
