@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Banner from "./component/banner/Banner";
+import Banner from "./component/Banner/Banner";
 import Tech from "./component/Tech/Tech";
-import About from "./component/about/About";
+import About from "./component/About/About";
 import Service from "./component/service/Service";
-import WorkProcess from "./component/workProcess/WorkProcess";
+import WorkProcess from "./component/WorkProcess/WorkProcess";
 // import Team from "@/app/home/component/team/Team";
 import TechStack from "./component/TechStack/TechStack";
-import Feature from "./component/feature/Feature";
+import Feature from "./component/Feature/Feature";
 import styles from "../page.module.scss";
 
 
