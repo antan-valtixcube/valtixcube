@@ -22,3 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: dev server
+        working-directory: .
+        run: npm run build
