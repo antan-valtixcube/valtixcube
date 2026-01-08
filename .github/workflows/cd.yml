@@ -20,7 +20,7 @@ jobs:
             cd /app/valtixcube_dev
             git pull origin dev
             docker compose down
-            docker build --no-cache -t valtixcube_dev .
+            docker build --no-cache -t valtixcube_dev:latest .
             docker compose up -d --no-build
   
   deploy-qa:
@@ -39,5 +39,5 @@ jobs:
             cd /app/valtixcube_qa
             git pull origin dev
             docker compose down
-            docker build --no-cache -t valtixcube_qa .
+            docker build --no-cache -t valtixcube_qa:latest .
             docker compose up -d --no-build
