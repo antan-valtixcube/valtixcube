@@ -1,6 +1,6 @@
 FROM node:20
 
-WORKDIR /usr/src/dev_valtixcube
+WORKDIR /usr/src/valtixcube
 
 # Copy package files first
 COPY package.json ./
