@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Banner from "./component/Banner/Banner";
-import Tech from "./component/Tech/Tech";
+import Tech from "./component/tech/Tech";
 import About from "./component/About/About";
 import Service from "./component/service/Service";
 import WorkProcess from "./component/WorkProcess/WorkProcess";
