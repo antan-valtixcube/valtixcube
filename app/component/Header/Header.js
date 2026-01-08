@@ -30,8 +30,8 @@ export default function Header() {
         <nav className={styles.desktopNav}>
           <ul>
             <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Tech</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
@@ -50,8 +50,8 @@ export default function Header() {
       {/* MOBILE MENU */}
       <div className={`${styles.mobileMenu} ${open ? styles.show : ""}`}>
         <a href="#">Home</a>
+        <a href="#">About Us</a>
         <a href="#">Services</a>
-        <a href="#">Tech</a>
         <a href="#">Contact</a>
       </div>
     </header>
