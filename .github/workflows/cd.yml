@@ -19,5 +19,5 @@ jobs:
             cd /app/valtixcube
             git pull origin main
             docker compose down
-            docker build -t valtixcube .
+            docker build -t valtixcube-valtixcube .
             docker compose up -d
