@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /app/valtixcube
-            git pull origin main
+            git pull origin dev
             docker compose down
             docker build -t valtixcube_dev .
             docker compose up -d
@@ -37,7 +37,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /app/valtixcube
-            git pull origin main
+            git pull origin dev
             docker compose down
             docker build -t valtixcube_qa .
             docker compose up -d
