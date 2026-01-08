@@ -1,0 +1,154 @@
+/* ===============================
+   BASE (DESKTOP)
+   =============================== */
+
+.footer {
+  background: #2f3336;
+  color: #d1d5db;
+  padding: 80px 20px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.col h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* ORANGE LINE */
+.line {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #ff5a1f;
+  margin-bottom: 24px;
+}
+
+/* LINKS */
+ul.foot {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 24px;
+
+  li {
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+/* MAP BACKGROUND */
+.map {
+  background: url("/map.png") no-repeat center;
+  background-size: contain;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+  margin-bottom: 40px;
+
+  span {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* SUBSCRIBE */
+.subscribe input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ff5a1f;
+  width: 100%;
+  padding: 8px 0;
+  color: #ffffff;
+  outline: none;
+}
+
+/* ADDRESS */
+.address {
+  margin-bottom: 28px;
+
+  strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5f5;
+  }
+}
+
+/* COPYRIGHT BAR */
+.copyright {
+  background: #262a2d;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ===============================
+   TABLET (≤ 900px)
+   =============================== */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  ul.foot {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   MOBILE (≤ 480px)
+   =============================== */
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* REORDER COLUMNS */
+  .container > .col:nth-child(1) {
+    order: 1; // Links
+  }
+
+  .container > .col:nth-child(3) {
+    order: 2; // Address
+  }
+
+  .container > .col:nth-child(2) {
+    order: 3; // Social at bottom
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .subscribe input {
+    text-align: center;
+  }
+}
