@@ -1,5 +1,5 @@
 
-import styles from './tech.module.scss';
+import styles from './Tech.module.scss';
 import { TabletSmartphone, LayoutTemplate, CloudCog } from "lucide-react";
 
 export default function Tech() {
