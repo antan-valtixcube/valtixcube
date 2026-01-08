@@ -17,10 +17,9 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /app/valtixcube
+            cd /app/valtixcube_dev
             git pull origin dev
             docker compose down
-            docker build -t valtixcube_dev .
             docker compose up -d
   
   deploy-qa:
@@ -36,8 +35,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /app/valtixcube
+            cd /app/valtixcube_qa
             git pull origin dev
             docker compose down
-            docker build -t valtixcube_qa .
             docker compose up -d
