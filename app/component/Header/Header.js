@@ -10,7 +10,7 @@ export default function Header() {
       {/* TOP BAR */}
       <div className={styles.topBar}>
         <div className={styles.frame}>
-          <a href="tel:+919999999999" className={styles.item}>📞 +91 9876543210</a>
+          <a href="tel:+919999999999" className={styles.item}>📞 +91 9791947774</a>
           {/* <span className={styles.divider}></span>
           <a href="#" className={styles.icon}>🔗</a> */}
         </div>
