@@ -7,12 +7,3 @@ services:
       - "3001:3000"
     environment:
       - NODE_ENV=development
-
-  valtixcube_qa:
-    image: valtixcube:latest
-    container_name: valtixcube_qa
-    restart: always
-    ports:
-      - "3002:3000"
-    environment:
-      - NODE_ENV=qa

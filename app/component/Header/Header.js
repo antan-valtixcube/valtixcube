@@ -12,9 +12,9 @@ export default function Header() {
       {/* TOP BAR */}
       <div className={styles.topBar}>
         <div className={styles.frame}>
-          <a href="tel:+919999999999" className={styles.item}><Phone className={styles.icon} strokeWidth={1} size={14} /> +91 9791947774</a>
+          <a href="tel:+919999999999" className={styles.item}><Phone className={styles.icon} strokeWidth={1} size={14} /></a>
           <span className={styles.divider}></span>
-          <a href="#" className={styles.icon}><Mail className={styles.icon} strokeWidth={1} size={16} /> Contact Us</a>
+          <a href="mailto:contact@valtixcube.com" className={styles.icon}><Mail className={styles.icon} strokeWidth={1} size={16} /> Contact Us</a>
         </div>
       </div>
 
@@ -52,10 +52,11 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       <div className={`${styles.mobileMenu} ${open ? styles.show : ""}`}>
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Contact Us</a>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/about">About Us</Link></li>
+        <li><Link href="/case-study">Case Study</Link></li>
+        <li><Link href="#">Services</Link></li>
+        <li><Link href="#">Contact Us</Link></li>
       </div>
     </header>
   );
