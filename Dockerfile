@@ -34,7 +34,7 @@ COPY --from=builder /usr/src/valtixcube/package-lock.json ./
 COPY --from=builder /usr/src/valtixcube/node_modules ./node_modules
 COPY --from=builder /usr/src/valtixcube/.next ./.next
 COPY --from=builder /usr/src/valtixcube/public ./public
-COPY --from=builder /usr/src/valtixcube/next.config.js ./next.config.js
+COPY --from=builder /usr/src/valtixcube/next.config.ts ./next.config.ts
 
 # Expose Next.js port
 EXPOSE 3000
