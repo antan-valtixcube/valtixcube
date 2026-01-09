@@ -54,6 +54,10 @@ jobs:
             git pull origin dev
 
             docker compose down --remove-orphans
+
+            # CLEAN DISK
+            docker system prune -af --volumes || true
+
             docker image rm -f valtixcube:latest || true
 
             docker build --no-cache --pull -t valtixcube:latest .
