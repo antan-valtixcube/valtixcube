@@ -1,5 +1,5 @@
 import styles from "./Service.module.scss";
-import { MonitorCog, BrainCog, Microchip, Megaphone, BrainCircuit } from "lucide-react";
+import { MonitorCog, BrainCog, Microchip, Megaphone, BrainCircuit, MoveRight } from "lucide-react";
 
 const services = [
   {
@@ -68,14 +68,14 @@ export default function Service() {
         <div className={styles.grid}>
           {services.map((service, index) => (
             <div key={index} className={styles.card}>
-              <div className={styles.icon}>{service.icon}</div>
+              <div className={styles.serIcon}>{service.icon}</div>
               <h3>{service.title}</h3>
               <ul className={styles.description}>
                 {service.description.map((line, i) => (
                   <li key={i}>{line}</li>
                 ))}
               </ul>
-              <a className={styles.learnmore} href="#">Learn More</a>
+              <a className={styles.learnmore} href="#"> Learn More <MoveRight className={styles.icon} strokeWidth={1} size={16} /></a>
             </div>
           ))}
         </div>

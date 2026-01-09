@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { Phone, Mail } from "lucide-react";
+import Link from "next/link";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -10,9 +12,9 @@ export default function Header() {
       {/* TOP BAR */}
       <div className={styles.topBar}>
         <div className={styles.frame}>
-          <a href="tel:+919999999999" className={styles.item}>📞 +91 9791947774</a>
-          {/* <span className={styles.divider}></span>
-          <a href="#" className={styles.icon}>🔗</a> */}
+          <a href="tel:+919999999999" className={styles.item}><Phone className={styles.icon} strokeWidth={1} size={14} /> +91 9791947774</a>
+          <span className={styles.divider}></span>
+          <a href="#" className={styles.icon}><Mail className={styles.icon} strokeWidth={1} size={16} /> Contact Us</a>
         </div>
       </div>
 
@@ -29,10 +31,11 @@ export default function Header() {
         {/* DESKTOP NAV */}
         <nav className={styles.desktopNav}>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/case-study">Case Study</Link></li>
+            <li><Link href="#">Services</Link></li>
+            <li><Link href="#">Contact Us</Link></li>
           </ul>
         </nav>
 

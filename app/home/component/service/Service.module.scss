@@ -4,7 +4,7 @@
 
 .services {
   background: #f4f1e8;
-  padding: 60px 100px;
+  padding: 60px 80px;
 }
 
 .container {
@@ -47,7 +47,6 @@
   background: #efece3;
   border-radius: 18px;
   padding: 20px;
-  min-height: 350px;
   transition: all 0.3s ease;
   position: relative;
 
@@ -75,24 +74,33 @@
   }
 }
 
-/* LEARN MORE */
 .learnmore {
+  display: inline-block;
   margin-top: 20px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   color: #34aadc;
   text-decoration: none;
-  position: absolute;
-  bottom: 30px;
-  left: 40px;
+  position: relative;
+  transition: color 0.3s ease;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    transition: transform 0.3s ease;
+  }
 
   &:hover {
-    text-decoration: underline;
+    svg {
+      transform: translateX(57px);
+    }
   }
 }
 
+
 /* ICON */
-.icon {
+.serIcon {
   width: 56px;
   height: 56px;
   margin: 0 auto 20px auto;
@@ -110,7 +118,7 @@
    =============================== */
 @media (min-width: 1600px) {
   .services {
-    padding: 60px 160px;
+    padding: 60px 100px;
   }
 
   .grid {
@@ -127,7 +135,7 @@
    =============================== */
 @media (max-width: 1440px) {
   .services {
-    padding: 100px 120px;
+    padding: 100px 100px;
   }
 
   .grid {

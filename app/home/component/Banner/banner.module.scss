@@ -84,9 +84,7 @@
    1920px & LARGE SCREENS
    =============================== */
 @media (min-width: 1600px) {
-  .swiper {
-    height: 600px;
-  }
+
 
   .frame {
     max-width: 1400px;
@@ -110,7 +108,7 @@
    =============================== */
 @media (max-width: 1440px) {
   .swiper {
-    height: 520px;
+    height: 450px;
   }
 
   .content h1 {
@@ -127,7 +125,7 @@
    =============================== */
 @media (max-width: 1366px) {
   .swiper {
-    height: 480px;
+    height: 420px;
   }
 
   .frame {
@@ -148,7 +146,7 @@
    =============================== */
 @media (max-width: 1200px) {
   .swiper {
-    height: 450px;
+    height: 380px;
   }
 
   .frame {
@@ -187,6 +185,7 @@
   .frame img {
     height: 260px;
     margin: 0 auto;
+    display: none;
   }
 
   .content h1 {

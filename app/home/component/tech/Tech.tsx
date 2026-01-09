@@ -14,8 +14,7 @@ export default function Tech() {
                     <h3 className={styles.feature__title}>Web Development</h3>
                     <span className={styles.feature__divider}></span>
                     <p className={styles.feature__desc}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Ab corrupti, quasi? Beatae cumque maiores.
+                        We build fast, secure, and scalable websites tailored to your business goals. From concept to launch, we turn ideas into powerful digital experiences.
                     </p>
                 </div>
 
@@ -26,8 +25,7 @@ export default function Tech() {
                     <h3 className={styles.feature__title}>Mobile Development</h3>
                     <span className={styles.feature__divider}></span>
                     <p className={styles.feature__desc}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Ab corrupti, quasi? Beatae cumque maiores.
+                        We build high-performance mobile apps for iOS and Android platforms. Secure, scalable, and designed to deliver seamless user experiences.
                     </p>
                 </div>
 
@@ -38,8 +36,7 @@ export default function Tech() {
                     <h3 className={styles.feature__title}>Cloud Computing</h3>
                     <span className={styles.feature__divider}></span>
                     <p className={styles.feature__desc}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Ab corrupti, quasi? Beatae cumque maiores.
+                        Reliable cloud services for modern, always-on applications. Secure, scalable, and built for the future.
                     </p>
                 </div>
 
