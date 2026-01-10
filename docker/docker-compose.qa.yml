@@ -2,7 +2,7 @@ services:
   valtixcube_qa:
     restart: always
     build: 
-      context: .
+      context: ..
       dockerfile: Dockerfile
     container_name: valtixcube_qa
     ports:
