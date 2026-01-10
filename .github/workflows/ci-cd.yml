@@ -52,8 +52,13 @@ jobs:
             set -e
             cd /app/valtixcube_dev
             git pull origin dev
+
+            # CLEAN DISK 
+            docker system prune -af --volumes || true 
+            docker image rm -f valtixcube:latest || true
+
             docker compose -p valtixcube_dev -f docker/docker-compose.dev.yml down --remove-orphans
-            docker build -t valtixcube:dev .
+            docker build --no-cache -t valtixcube:dev .
             docker compose -p valtixcube_dev -f docker/docker-compose.dev.yml up -d
 
 
@@ -79,6 +84,6 @@ jobs:
             cd /app/valtixcube_qa
             git pull origin dev
             docker compose -p valtixcube_qa -f docker/docker-compose.qa.yml down --remove-orphans
-            docker build -t valtixcube:qa .
+            docker build --no-cache -t valtixcube:qa .
             docker compose -p valtixcube_qa -f docker/docker-compose.qa.yml up -d
 
