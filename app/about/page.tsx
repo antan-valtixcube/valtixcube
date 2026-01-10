@@ -1,6 +1,7 @@
 // app/components/AboutHero/AboutHero.tsx
 import Link from "next/link";
 import styles from "./About.module.scss";
+import Image from "next/image";
 
 export default function AboutHero() {
     return (
@@ -21,7 +22,7 @@ export default function AboutHero() {
                 {/* ================= Visual Grid ================= */}
                 <div className={styles.visualGrid}>
                     <div className={styles.imageLarge}>
-                        <img src="/about-02.jpg" alt="Team collaboration" />
+                        <Image src="/about/about-02.webp"  alt="Team collaboration" width={100} height={100} sizes="100%" />
                     </div>
 
                     <div className={styles.quoteCard}>
@@ -32,11 +33,11 @@ export default function AboutHero() {
                     </div>
 
                     <div className={styles.imageSmall}>
-                        <img src="/about-03.jpg" alt="Creative work" />
+                        <Image src="/about/about-03.webp" alt="Creative work" width={100} height={100} sizes="100%" />
                     </div>
 
                     <div className={styles.imageWide}>
-                        <img src="/about-01.jpg" alt="Office meeting" />
+                        <Image src="/about/about-01.webp" alt="Office meeting" width={100} height={100} sizes="100%" />
                         {/* <button className={styles.videoBtn}>▶ Watch our story</button> */}
                     </div>
                 </div>

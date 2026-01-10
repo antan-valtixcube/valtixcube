@@ -1,4 +1,5 @@
 // app/components/CaseStudies/CaseStudies.tsx
+import Image from "next/image";
 import styles from "./CaseStudies.module.scss";
 
 const caseStudies = [
@@ -17,7 +18,7 @@ const caseStudies = [
       "Faster hiring cycles",
       "Improved recruiter efficiency and candidate experience",
     ],
-    img: '/hr.jpg',
+    img: '/casestudy/hr.webp',
   },
   {
     industry: "Retail, ERP & Inventory-Driven Businesses",
@@ -34,7 +35,7 @@ const caseStudies = [
       "Improved stock visibility and decision-making",
       "Reduced manual errors and operational overhead",
     ],
-    img: '/inventry.jpg',
+    img: '/casestudy/inventory.webp',
   },
   {
     industry: "E-commerce & Digital Commerce Platforms",
@@ -51,7 +52,7 @@ const caseStudies = [
       "Faster partner integrations and go-lives",
       "Improved order success rates and operational control",
     ],
-    img: '/ecom.jpg',
+    img: '/casestudy/ecom.webp',
   },
   {
     industry: "Healthcare & MedTech Products",
@@ -68,7 +69,7 @@ const caseStudies = [
       "Reliable device-to-cloud data synchronization",
       "Secure, compliant handling of medical data",
     ],
-    img: '/healthcare.jpg',
+    img: '/casestudy/healthcare.webp',
   },
   {
     industry: "Real Estate & Property Management Systems",
@@ -85,7 +86,7 @@ const caseStudies = [
       "Better lead-to-conversion visibility",
       "Reduced manual operational effort",
     ],
-    img: '/realstate.jpg',
+    img: '/casestudy/realstate.webp',
   },
 ];
 
@@ -131,7 +132,7 @@ export default function CaseStudies() {
                 </div>
                 </article>
                 <div className={styles.images}>
-                    <img src={item.img} alt={item.industry} />
+                    <Image src={item.img} alt={item.industry} width={100} height={100} sizes="100%"  />
                 </div>
             </section>
           ))}

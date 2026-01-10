@@ -8,7 +8,7 @@ export default function AboutSection() {
         {/* LEFT IMAGE */}
         <div className={styles.imageWrapper}>
           <Image
-            src="/about_us.jpg" // replace with your image path
+            src="/about_us.webp" // replace with your image path
             alt="Team working together"
             fill
             priority
