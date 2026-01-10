@@ -55,12 +55,7 @@ jobs:
 
             docker compose -p valtixcube_dev -f docker/docker-compose.dev.yml down --remove-orphans
 
-            # CLEAN DISK 
-            # docker system prune -af --volumes || true 
-            # docker image rm -f valtixcube_dev || true
-
-            docker build --no-cache -t valtixcube_dev .
-            docker compose -p valtixcube_dev -f docker/docker-compose.dev.yml up -d
+            docker compose -p valtixcube_dev -f docker/docker-compose.dev.yml up -d --build
 
 
 

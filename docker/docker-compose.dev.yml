@@ -1,10 +1,10 @@
 services:
   valtixcube_dev:
+    image: valtixcube:dev            # ⭐ REQUIRED
     restart: always
-    build: 
+    build:
       context: ..
       dockerfile: Dockerfile
-    container_name: valtixcube_dev
     ports:
-      - "3001:3000"                       # Map port 3000 in container to port 3001 on host
-    command: npm run start
+      - "3001:3000"
+    command: ["npm", "start"]
