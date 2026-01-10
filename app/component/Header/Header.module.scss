@@ -22,9 +22,12 @@
   }
 
   .item {
-    display: inline-block;
+    display: flex;
     color: #fff;
     text-decoration: none;
+    align-items: center;
+    gap: 6px;
+
   }
 
   .divider {
@@ -92,6 +95,15 @@
     padding: 0;
     margin: 0;
 
+    li{
+      position: relative;
+      display: inline-block;
+
+      &:hover .submenu {
+        display: block;
+      }
+    }
+
     a {
       text-decoration: none;
       font-size: 14px;
@@ -103,6 +115,60 @@
     }
   }
 }
+
+.hasSubmenu {
+  position: relative;
+  margin-top: 2.5px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  &:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  min-width: 200px;
+  padding: 8px 0;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+
+  a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+      background: #f5f7fa;
+      color: #34aadc;
+    }
+  }
+}
+
+
+
 
 /* HAMBURGER */
 .hamburger {
@@ -161,6 +227,49 @@
   display: flex;
 }
 
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+
+  a {
+    padding: 16px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #f1f1f1;
+  }
+}
+
+.mobileSubmenu {
+  border-bottom: 1px solid #f1f1f1;
+
+  button {
+    width: 100%;
+    padding: 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.mobileSubmenuItems {
+  background: #f9fafb;
+
+  a {
+    padding: 14px 24px;
+    font-size: 13px;
+    display: block;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .topBar {
@@ -175,3 +284,18 @@
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobileMenu.show {
+    display: flex;
+  }
+}
+

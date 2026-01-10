@@ -1,336 +1,164 @@
-
-/* ==================================================
-   AboutHero.module.scss
-   ================================================== */
-
-.aboutHero {
-  padding: 80px 20px;
-  background: #ffffff;
-}
-
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  float: left;
+  width: 100%;
+  padding: 60px 0;
+  font-family: var(--font-sans);
+  color: #333;
 }
 
-/* ================= Top ================= */
-.top {
+/* Hero */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 60px;
 
   h1 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
-    margin: 16px 0;
+    margin-bottom: 8px;
   }
 
   p {
     font-size: 16px;
     color: #555;
-    line-height: 1.7;
+    padding: 10px 0;
   }
 }
 
-.badge {
-  display: inline-block;
-  background: #f3f4f6;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-/* ================= Visual Grid ================= */
-.visualGrid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 24px;
-  margin-bottom: 80px;
-}
-
-.imageLarge {
-  grid-row: span 2;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-  }
-}
-
-.imageSmall img,
-.imageWide img {
+.missionVision {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
+  background: #fff;
 }
 
-.imageSmall {
-  height: 180px;
-}
+.missionVision_container {
+  width: 100%;
+  background: #f4faff;
 
-.imageWide {
-  position: relative;
-  grid-column: span 2;
-}
-
-.videoBtn {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: #ffffff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.quoteCard {
-  background: #111827;
-  color: #fff;
-  padding: 24px;
-  border-radius: 16px;
-
-  span {
-    font-size: 12px;
-    opacity: 0.7;
-  }
-
-  p {
-    font-size: 18px;
-    margin-top: 12px;
-    line-height: 1.5;
+  &:nth-child(2) {
+    background: #fff7f7;
   }
 }
 
-/* ================= Bottom ================= */
-.bottomGrid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-
-  > *:last-child {
-    grid-column: 1 / -1; // full width
-  }
-
-
-}
-
-.featureCard {
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 16px;
-
-  h4 {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-
-  p {
-    font-size: 13px;
-    color: #555;
-  }
-}
-
-.aboutText h3 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-.aboutText p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-.actions {
-  margin-top: 20px;
-  display: flex;
-  gap: 16px;
-}
-
-.primary {
-  background: #111827;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-}
-
-.link {
-  background: none;
-  border: none;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-
-
-/* ==================================================
-   BoostEfficiency.module.scss
-   ================================================== */
-
-.boost {
-  padding: 100px 20px;
-  background: #ffffff;
-}
-
-.container {
+.missionVision_block {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 40px;
 }
 
-.grid {
+/* ROW STRUCTURE */
+.row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 300px 1fr;
+  gap: 80px;
+  align-items: flex-start;
 }
 
-/* ================= Image ================= */
-.imageWrap {
-  position: relative;
-
-  img {
-    width: 100%;
-    border-radius: 16px;
-    object-fit: cover;
+/* LEFT TITLE */
+.left {
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #0f2a52;
+    line-height: 1.2;
   }
 }
 
-.decor {
-  position: absolute;
-  top: -16px;
-  left: -16px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 3px dashed #111;
+/* RIGHT CONTENT */
+.right {
+  p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #6b7a90;
+    margin-bottom: 24px;
+    max-width: 680px;
+  }
 }
 
-/* ================= Content ================= */
-.content h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 16px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .left h2 {
+    font-size: 22px;
+  }
 }
 
-.intro {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-}
+/* Values Grid */
+.values {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
 
-.hr {
-  margin: 24px 0;
-  border: none;
-  border-top: 1px solid #e5e7eb;
-}
+  &.altBg {
+    background: #f9fafb;
+    padding: 60px 24px;
+  }
 
-.desc {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 24px;
-}
+  h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
 
-.list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 24px;
-  margin-bottom: 32px;
+  .valuesGrid {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 
-  li {
-    list-style: none;
-    font-size: 14px;
-    color: #111;
-    position: relative;
-    padding-left: 22px;
+  .valueCard {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #eee;
 
-    &::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: #22c55e;
+    h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    p {
       font-size: 14px;
+      color: #555;
     }
   }
 }
 
+/* CTA Section */
 .cta {
-  background: #111827;
-  color: #fff;
-  border: none;
-  padding: 14px 22px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e5;
 
-  span {
-    color: #22c55e;
-    margin-left: 6px;
-  }
-}
-
-/* ================= Responsive ================= */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .content h2 {
-    font-size: 28px;
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
   }
 
-  .list {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* ================= Responsive ================= */
-@media (max-width: 1024px) {
-  .visualGrid {
-    grid-template-columns: 1fr 1fr;
+  p {
+    margin-bottom: 16px;
+    color: #444;
   }
 
-  .imageLarge {
-    grid-row: auto;
-  }
+  button {
+    background: #34aadc;
+    color: #fff;
+    padding: 12px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 
-  .bottomGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .top h1 {
-    font-size: 28px;
-  }
-
-  .visualGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .imageWide {
-    grid-column: auto;
-  }
-
-  .features {
-    grid-template-columns: 1fr;
+    &:hover {
+      background: #2a92bc;
+    }
   }
 }

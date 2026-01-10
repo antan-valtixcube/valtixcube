@@ -1,115 +1,119 @@
-// app/components/AboutHero/AboutHero.tsx
-import Link from "next/link";
+"use client";
+
 import styles from "./About.module.scss";
-import Image from "next/image";
 
-export default function AboutHero() {
+export default function AboutUs() {
     return (
-        <section className={styles.aboutHero}>
-            <div className={styles.container}>
-                {/* ================= Top Content ================= */}
-                <div className={styles.top}>
-                    <span className={styles.badge}>Who We Serve</span>
-                    <h1>
-                        We don’t chase industries.
-                    </h1>
-                    <p>
-                        We partner with organizations where technology must deliver measurable outcomes, not just features.
-                    </p>
-                    <p>At ValtixCube, we work with teams solving high-impact, real-world problems—using product thinking, AI, and scalable engineering.</p>
+        <div className={styles.container}>
+            {/* Hero / Title Section */}
+            <section className={styles.hero}>
+                <h1>Your Technology & Engineering Partner for AI-Driven Solutions</h1>
+                <p>
+                    ValtixCube is a service-based technology and consulting company that helps businesses build, modernize, and scale digital solutions using AI, cloud, and modern engineering practices.
+                </p>
+                <p>
+                    We partner with startups, growing companies, and enterprises to solve real business problems through custom software development, AI-enabled platforms, and scalable systems—from early-stage builds to enterprise implementations.
+                </p>
+            </section>
+            {/* Mission & Vision Section */}
+            <section className={styles.missionVision}>
+
+                    {/* MISSION */}
+                <div className={styles.missionVision_container}>
+                    <div className={styles.missionVision_block}>
+                    <div className={styles.row}>
+                        <div className={styles.left}>
+                            <h2>Our Mission</h2>
+                        </div>
+
+                        <div className={styles.right}>
+                            <p>
+                                To be the global leader in IT Services. Building on our
+                                technologies, competencies and customer interests, and creating
+                                value for our stakeholders and customers.
+                            </p>
+
+                            <p>
+                                We’ll achieve this by focusing on the intersection of our client’s
+                                emerging needs and the acceleration of business and technological
+                                change.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
                 </div>
 
-                {/* ================= Visual Grid ================= */}
-                <div className={styles.visualGrid}>
-                    <div className={styles.imageLarge}>
-                        <Image src="/about/about-02.webp"  alt="Team collaboration" width={100} height={100} sizes="100%" />
+                {/* VISION */}
+                <div className={styles.missionVision_container}>
+                    <div className={styles.missionVision_block}>
+                    <div className={styles.row}>
+                        <div className={styles.left}>
+                            <h2>Our Vision</h2>
+                        </div>
+
+                        <div className={styles.right}>
+                            <p>
+                                ValtixCube will be the first choice solution partner in the
+                                technology sector providing IT and communication services to
+                                businesses across regions.
+                            </p>
+
+                            <p>
+                                We will become an integral part of our client’s success,
+                                collaborating with them to achieve strategic objectives while
+                                creating long-lasting business value.
+                            </p>
+
+                            <p>
+                                Our team of talented, experienced, and motivated professionals
+                                will be recognized as leaders in their field, driven by shared
+                                success.
+                            </p>
+                        </div>
+                    </div>
                     </div>
 
-                    <div className={styles.quoteCard}>
-                        <span>Our Goal</span>
-                        <p>
-                            “We believe that it takes great people to deliver a great product”
-                        </p>
+                </div>
+            </section>
+
+
+
+
+            {/* Values Block */}
+            <section className={styles.values}>
+                <h2>Our Core Values</h2>
+                <div className={styles.valuesGrid}>
+                    <div className={styles.valueCard}>
+                        <h3>Integrity</h3>
+                        <p>Honest, transparent, and ethical in everything we do.</p>
                     </div>
 
-                    <div className={styles.imageSmall}>
-                        <Image src="/about/about-03.webp" alt="Creative work" width={100} height={100} sizes="100%" />
+                    <div className={styles.valueCard}>
+                        <h3>Innovation</h3>
+                        <p>Always pushing ideas forward with creativity and curiosity.</p>
                     </div>
 
-                    <div className={styles.imageWide}>
-                        <Image src="/about/about-01.webp" alt="Office meeting" width={100} height={100} sizes="100%" />
-                        {/* <button className={styles.videoBtn}>▶ Watch our story</button> */}
+                    <div className={styles.valueCard}>
+                        <h3>Collaboration</h3>
+                        <p>Working together with clients and teams to create meaningful outcomes.</p>
+                    </div>
+
+                    <div className={styles.valueCard}>
+                        <h3>Excellence</h3>
+                        <p>Delivering high-quality results with attention to every detail.</p>
                     </div>
                 </div>
+            </section>
 
-                {/* ================= Bottom Content ================= */}
-                <div className={styles.bottomGrid}>
-                    <div className={styles.features}>
-                        <div className={styles.featureCard}>
-                            <h4>HR, Recruitment & Enterprise Platforms</h4>
-                            <p>Helping organizations reduce hiring friction, automate screening, and improve recruiter productivity through intelligent, workflow-driven platforms.</p>
-                        </div>
-                        <div className={styles.featureCard}>
-                            <h4>Retail, ERP & Inventory-Driven Businesses</h4>
-                            <p>Enabling better operational control, inventory visibility, and sales efficiency through unified systems and automation.</p>
-                        </div>
-                        <div className={styles.featureCard}>
-                            <h4>E-commerce & Digital Commerce</h4>
-                            <p>Supporting fast-growing commerce businesses with scalable platforms, seamless integrations, and operational reliability.</p>
-                        </div>
-                        <div className={styles.featureCard}>
-                            <h4>Healthcare & MedTech</h4>
-                            <p>Building reliable, secure, and compliant digital solutions for healthcare workflows and connected medical systems.</p>
-                        </div>
-                        <div className={styles.featureCard}>
-                            <h4>Real Estate & Property Management</h4>
-                            <p>Modernizing property operations, sales workflows, and visibility across inventory, leads, and performance.</p>
-                        </div>
-                    </div>
-
-                    <div className={styles.aboutText}>
-                        <h3>Where We Add the Most Value</h3>
-                        <p>
-                            Our expertise isn’t defined by the industry you operate in, but by the complexity of the problems you need to solve. We work with teams facing real operational, technical, and scalability challenges—where technology must deliver measurable outcomes, not just features. Through strong product thinking and a deep understanding of business needs, we help shape ideas into clear, practical, and impactful solutions.
-                        </p>
-                                               
-                        {/* Content */}
-                            <div className={styles.content}>
-
-                                <div className={styles.hr}></div>
-
-                                <p className={styles.desc}>
-                                    At the heart of our approach is a commitment to building robust and
-                                    scalable platforms that support the evolving needs of modern
-                                    businesses.
-                                </p>
-
-                                <ul className={styles.list}>
-                                    <li>Outcome-Driven Technology</li>
-                                    <li>Product-First Thinking</li>
-                                    <li>AI-Enabled Solutions</li>
-                                    <li>Scalable Engineering</li>
-                                    <li>Hiring Automation</li>
-                                    <li>Operational Visibility</li>
-                                    <li>Commerce Scalability</li>
-                                    <li>Secure Healthcare Systems</li>
-                                    <li>Property Workflow Modernization</li>
-                                    <li>Enterprise-Grade Reliability</li>
-                                </ul>
-
-                            </div>
-                        
-                        <div className={styles.actions}>
-                            <Link href="/services" className={styles.primary}>Explore services</Link>
-                            <button className={styles.link}>Request a quote →</button>
-                        </div>
-                    </div>
-                </div>
-              
-
-
-            </div>
-        </section>
+            {/* CTA Section */}
+            <section className={styles.cta}>
+                <h2>Want to Work With Us?</h2>
+                <p>
+                    Let’s build remarkable experiences together.
+                </p>
+                <button>Contact Us</button>
+            </section>
+        </div>
     );
 }
-
