@@ -36,13 +36,13 @@ jobs:
   # CD - DEPLOY DEV
   # ----------------------------
   deploy-dev:
-    name: Deploy Dev
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     environment: dev
 
     steps:
-      - name: SSH Deploy to Dev
+      - name: SSH Deploy
         uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.EC2_HOST }}
@@ -67,24 +67,24 @@ jobs:
   # ----------------------------
   # CD - DEPLOY QA
   # ----------------------------
-  deploy-qa:
-    name: Deploy QA
-    needs: deploy-dev
-    runs-on: ubuntu-latest
-    environment: qa
+  # deploy-qa:
+  #   name: Deploy QA
+  #   needs: deploy-dev
+  #   runs-on: ubuntu-latest
+  #   environment: qa
 
-    steps:
-      - name: SSH Deploy to QA
-        uses: appleboy/ssh-action@v0.1.6
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            set -e
-            cd /app/valtixcube_qa
-            git pull origin dev
-            docker compose -p valtixcube_qa -f docker/docker-compose.qa.yml down --remove-orphans
-            docker build --no-cache -t valtixcube_qa .
-            docker compose -p valtixcube_qa -f docker/docker-compose.qa.yml up -d
+  #   steps:
+  #     - name: SSH Deploy to QA
+  #       uses: appleboy/ssh-action@v0.1.6
+  #       with:
+  #         host: ${{ secrets.EC2_HOST }}
+  #         username: ${{ secrets.EC2_USERNAME }}
+  #         key: ${{ secrets.EC2_SSH_KEY }}
+  #         script: |
+  #           set -e
+  #           cd /app/valtixcube_qa
+  #           git pull origin dev
+  #           docker compose -p valtixcube_qa -f docker/docker-compose.qa.yml down --remove-orphans
+  #           docker build --no-cache -t valtixcube_qa .
+  #           docker compose -p valtixcube_qa -f docker/docker-compose.qa.yml up -d
 
