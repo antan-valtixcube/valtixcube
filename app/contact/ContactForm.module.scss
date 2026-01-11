@@ -1,0 +1,306 @@
+/* HERO */
+.hero {
+    background: #f5f5f5 url("/contact_map.png") no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.heroInner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 16px;
+}
+
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* PAGE */
+.page {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 60px;
+    padding: 0 16px;
+}
+
+/* FORM */
+.step {
+    display: flex;
+    gap: 10px;
+    margin: 40px 0 24px;
+
+    span {
+        color: #34aadc;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+}
+
+.fullField {
+    margin-bottom: 32px;
+
+    textarea,
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+}
+
+/* CHECKBOX */
+.checkboxGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+
+    input {
+        opacity: 0;
+        position: absolute;
+    }
+
+    span {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #34aadc;
+        border-radius: 4px;
+    }
+
+    input:checked + span {
+        background: #34aadc;
+    }
+}
+
+/* SUBMIT */
+.submit {
+    margin-top: 40px;
+    width: 100%;
+    padding: 18px;
+    border-radius: 5px;
+    border: 2px solid #34aadc;
+    background: #34aadc;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background: #34aadc;
+        color: #fff;
+    }
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.sideItem {
+    margin-bottom: 30px;
+
+    .icon {
+        width: 42px;
+        height: 42px;
+        background: #f5f5f5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #34aadc;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #34aadc;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+}
+
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+.quickLinks a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .grid,
+    .checkboxGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.locations {
+    display: flex;
+    flex-direction: row;
+}
+
+/* CARD */
+.card {
+    h3 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+}
+
+/* CITY */
+.city {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #34aadc;
+    border-radius: 50%;
+}
+
+/* ADDRESS */
+.address {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #9aa0a6;
+    max-width: 280px;
+    margin-bottom: 26px;
+}
+
+/* DIVIDER */
+.divider {
+    position: relative;
+    height: 1px;
+    background: #e5e7eb;
+    margin-bottom: 24px;
+
+    span {
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 26px;
+        height: 2px;
+        background: #34aadc;
+    }
+}
+
+/* CONTACT */
+.contact {
+    p {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+.phone {
+    color: #34aadc;
+}
+
+.email {
+    color: #34aadc;
+}
+
+/* Error message */
+.error {
+  color: #d9534f;            /* red */
+  font-size: 12px;
+}
+
+.info {
+  color: #34aadc;            /* red */
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .locations {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .address {
+        max-width: 100%;
+    }
+}
