@@ -96,7 +96,7 @@ export default function ContactPage() {
 
             {/* STEP 01 */}
             <div className={styles.step}>
-              <span>01.</span>
+              {/* <span>01.</span> */}
               <h2>Tell Us About Yourself</h2>
             </div>
 
@@ -176,7 +176,7 @@ export default function ContactPage() {
 
             {/* STEP 02 */}
             <div className={styles.step}>
-              <span>02.</span>
+              {/* <span>02.</span> */}
               <h2>How Can We Help You With?</h2>
             </div>
 
@@ -215,7 +215,7 @@ export default function ContactPage() {
 
             {/* STEP 03 */}
             <div className={styles.step}>
-              <span>03.</span>
+              {/* <span>03.</span> */}
               <h2>Tell Us About Your Project</h2>
             </div>
 

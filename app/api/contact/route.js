@@ -32,14 +32,15 @@ export async function POST(req) {
       port: 587,
       secure: false,
       auth: {
-        user: "antan.n@valtixcube.com",
-        pass: "ohha cdzj mmgy bduz",
+        user: "info@valtixcube.com",
+        // pass: "ohha cdzj mmgy bduz",
+        pass: "egdd byfy pwtn lpct",
       },
     });
 
     await transporter.sendMail({
-      from: `"Valtixcube Contact" <${process.env.EMAIL_USER}>`,
-      to: "antan.joe@gmail.com",
+      from: `"Valtixcube Contact" info@valtixcube.com`,
+      to: "contact@valtixcube.com",
       subject: "New Contact Form Submission",
       html: `
         <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6f8;padding:30px 0;font-family:Arial,sans-serif;">

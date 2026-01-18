@@ -33,18 +33,18 @@ export default function ContactLocations() {
                 {item.city}
               </div>
 
-              <p className={styles.address}>{item.address}</p>
+              {/* <p className={styles.address}>{item.address}</p> */}
 
-              <div className={styles.divider}>
-                <span></span>
-              </div>
 
               <div className={styles.contact}>
                 <p className={styles.phone}>{item.phone}</p>
                 <p className={styles.email}>{item.email}</p>
               </div>
+
+              <div className={styles.divider}>
+                <span></span>
+              </div>
             </div>
-            {index !== locations.length - 1 && (<div className={styles.divider}></div>)}
           </div>
         ))}
       </div>
