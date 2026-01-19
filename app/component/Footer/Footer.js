@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Footer.module.scss";
 import { Linkedin, Instagram, Facebook, X } from "lucide-react";
 
@@ -13,14 +14,14 @@ export default function Footer() {
             <span className={styles.line} />
 
             <ul className={styles.foot}>
-              <li>Home</li>
-              <li>Contact</li>
-              <li>Privacy Policy</li>
-              <li>Services</li>
-              <li>Terms</li>
-              <li>Security</li>
-              <li>Pricing</li>
-              <li>Features</li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/who-we-serve">Who We Serve</Link></li>
+              <li><Link href="/case-study">Case Study</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="/terms-condition">Terms & Conditions</Link></li>
             </ul>
           </div>
 
@@ -48,20 +49,14 @@ export default function Footer() {
 
             <div className={styles.address}>
               <strong>Chennai Office</strong>
-              <p>
-                No. 12, Tech Park Road,
-                Chennai – 600096,
-                Tamil Nadu, India
-              </p>
+              <p>+91-800 123 4567</p>
+              <p>contact@valtixcube.com</p>
             </div>
 
             <div className={styles.address}>
               <strong>Coimbatore Office</strong>
-              <p>
-                128 King Street West,
-                Toronto, ON M5H 3T4,
-                Canada
-              </p>
+              <p>+91-800 123 4567</p>
+              <p>contact@valtixcube.com</p>
             </div>
           </div>
 

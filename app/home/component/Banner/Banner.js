@@ -8,6 +8,7 @@ import styles from "./banner.module.scss";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 export default function HeroSlider() {
     return (
@@ -34,7 +35,7 @@ export default function HeroSlider() {
                                 We are a technology-driven IT company focused on building reliable,
                                 scalable, and modern digital solutions for startups and businesses.
                             </p>
-                            <button>About Us</button>
+                            <Link href="/about" className={styles.link}>About Us</Link>
                         </div>
                     </div>
                 </div>
@@ -51,7 +52,7 @@ export default function HeroSlider() {
                                 We design, develop, and deploy high-quality web, mobile, and cloud
                                 solutions with a strong focus on performance, security, and scalability.
                             </p>
-                            <button>Our Services</button>
+                            <Link href="/services" className={styles.link}>Our Services</Link>
                         </div>
                     </div>
                 </div>
@@ -69,7 +70,7 @@ export default function HeroSlider() {
                                 simplify technology, automate operations, and help ideas grow into
                                 successful products.
                             </p>
-                            <button>Our Journey</button>
+                            <Link href="/case-study" className={styles.link}>Our Journey</Link>
                         </div>
                     </div>
                 </div>

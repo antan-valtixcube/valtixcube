@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styles from "./About.module.scss";
 
 export default function AboutUs() {
@@ -112,7 +113,7 @@ export default function AboutUs() {
                 <p>
                     Let’s build remarkable experiences together.
                 </p>
-                <button>Contact Us</button>
+                <Link href="/contact" className={styles.link}>Contact Us</Link>
             </section>
         </div>
     );

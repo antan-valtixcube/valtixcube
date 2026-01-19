@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Services.module.scss";
 import {
   Layers,
@@ -110,7 +111,7 @@ export default function TechnologyStack() {
             how to use technology to solve real business challenges.
           </p>
 
-          <button>Talk to Us</button>
+          <Link className={styles.link} href="/contact">Talk to Us</Link>
         </div>
 
       </div>

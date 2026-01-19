@@ -26,10 +26,13 @@ export default function Header() {
       {/* MAIN BAR */}
       <div className={styles.menuBar}>
         <div className={styles.logo}>
-          <img src="/valtixcube.webp" alt="Logo" />
+          
+            <img src="/valtixcube.webp" alt="Logo" />
           <div className={styles.logoText}>
-            <span className={styles.valtix}>Valtix</span>
-            <span className={styles.cube}>Cube</span>
+             <Link href="/" className={styles.logo}>
+              <span className={styles.valtix}>Valtix</span>
+              <span className={styles.cube}>Cube</span>
+              </Link>
           </div>
         </div>
 

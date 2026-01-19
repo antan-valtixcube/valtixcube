@@ -101,7 +101,7 @@ export default function WhoWeServe() {
                         
                         <div className={styles.actions}>
                             <Link href="/services" className={styles.primary}>Explore services</Link>
-                            <button className={styles.link}>Request a quote →</button>
+                            <Link href="/contact" className={styles.link}>Request a quote →</Link>
                         </div>
                     </div>
                 </div>
