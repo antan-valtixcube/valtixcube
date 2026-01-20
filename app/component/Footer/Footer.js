@@ -37,9 +37,9 @@ export default function Footer() {
               <span><X size={18} strokeWidth={1} /></span>
             </div>
 
-            <div className={styles.subscribe}>
+            {/* <div className={styles.subscribe}>
               <input placeholder="Type email and hit enter" />
-            </div>
+            </div> */}
           </div>
 
           {/* COLUMN 3 */}
